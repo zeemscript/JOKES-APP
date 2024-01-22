@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOKES APP</title>
+    <link rel="icon" type="image/png" href="jokelogo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light d-flex col-12 p-3 justify-content-around"
+    >
+      <div class="row">
+        <div class="container-fluid col-6 pt-3">
+          <a class="navbar-brand" href="#">Jokes App</a>
+        </div>
+        <div class="checkbox-apple col-6">
+          <input class="yep" id="check-apple" type="checkbox" />
+          <label for="check-apple"></label>
+        </div>
+      </div>
+    </nav>
+    <!---main content-->
+    <div id="full">
+      <div class="container justify-content-center">
+        <h2>DO YOU LIKE JOKES</h2>
+        <button
+          type="button"
+          class="btn btn-outline-success border-2"
+          onclick="joke()"
+        >
+          Get jokes
+        </button>
+        <!------------loading-->
+        <div class="container loader justify-content-center">
+          <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div id="data-container">
+          <ul class="ul"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="container contenter mb-0">
+      <ol>
+        <li>CLICK THE BUTTON TO GET NEW JOKE</li>
+        <li>WAIT FOR JOKE SOME SECONDS TO GET JOKES FROM THE SERVER</li>
+        <li>IF THERE IS AN ERROR, THE BUTTON WHEN CLIKED RETURNS AN ERROR</li>
+      </ol>
+    </div>
+    <!-------------sharing to social news feed-->
+    <section>
+      <div
+        class="container d-flex flex-wrap align-items-start justify-content-around contenter mt-5 mb-5"
+      >
+        <p class="lead px-5 justify-content-center d-flex">
+          Share on social media
+        </p>
+
+        <div
+          class="container d-flex flex-wrap align-items-start justify-content-around contenter mt-5 mb-5"
+        >
+          <!-- Facebook -->
+          <a
+            href="#"
+            target="_blank"
+            title="Share on Facebook"
+            onclick="shareOnFacebook()"
+          >
+            <i class="fa fa-facebook-square fa-2x"></i>
+          </a>
+
+          <!-- Twitter -->
+          <a
+            href="#"
+            target="_blank"
+            title="Share on Twitter"
+            onclick="shareOnTwitter()"
+          >
+            <i class="fa fa-twitter fa-2x"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="#"
+            target="_blank"
+            title="Share on LinkedIn"
+            onclick="shareOnLinkedIn()"
+          >
+            <i class="fa fa-linkedin fa-2x"></i>
+          </a>
+          <!-----whatsappp-->
+          <a href="#" title="Share on WhatsApp" onclick="shareOnWhatsApp()">
+            <i class="fa fa-whatsapp fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-------------footer-->
+    <footer class="bg-dark text-white p-5 text-center">
+      Copyright &copy; 2024 - jokes app by
+      <a
+        href="https://www.github.com/zeemscript
+      "
+        target="_blank"
+        >Abdulhazeem</a
+      >
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
